@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Caveat:wght@500&display=swap');
+
+* {
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Caveat', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(../Image/sunoo.jpeg);
+    background-size: cover;
+}
+
+.item {
+    background-color: lightblue;
+    padding: 1rem 10rem;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    /* memberikan transisi agar smooth */
+    transition: all 0.3s ease;
+}
+
+.item:hover{
+    background-color: lightsteelblue;
+    /* memberikan efek transformasi */
+    transform: translateY(-5px);
+}
+
+.item a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px){
+    body{
+        align-items: flex-start;
+    }
+
+    .item{
+        padding: 1rem 3rem;
+    }
+
+    .container{
+        width: 100%;
+    }
+}
